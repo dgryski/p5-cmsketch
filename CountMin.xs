@@ -22,7 +22,7 @@ sketch_add(cms, b, count)
         uint32_t count
     CODE:
         STRLEN  blen = 0;
-        char *bptr = SvPVbyte(b, blen);
+        unsigned char *bptr = (unsigned char*)SvPVbyte(b, blen);
         sketch_add(cms, bptr, blen, count);
         XSRETURN_UNDEF;
     OUTPUT:
@@ -35,7 +35,7 @@ sketch_count(cms, b)
         SV * b
     CODE:
         STRLEN  blen = 0;
-        char *bptr = SvPVbyte(b, blen);
+        unsigned char *bptr = (unsigned char*)SvPVbyte(b, blen);
         RETVAL = sketch_count(cms, bptr, blen);
     OUTPUT:
         RETVAL
@@ -76,7 +76,7 @@ sketch_values(cms,b)
         SV * b
     CODE:
         STRLEN  blen = 0;
-        char *bptr = SvPVbyte(b, blen);
+        unsigned char *bptr = (unsigned char*)SvPVbyte(b, blen);
         uint32_t *vals = sketch_values(cms, bptr, blen);
         int i;
         AV* ret = newAV();
@@ -103,7 +103,7 @@ bfilter_add(bf,b)
     SV * b
     CODE:
         STRLEN  blen = 0;
-        char *bptr = SvPVbyte(b, blen);
+        unsigned char *bptr = (unsigned char*)SvPVbyte(b, blen);
         bfilter_add(bf, bptr, blen);
         XSRETURN_UNDEF;
     OUTPUT:
@@ -132,7 +132,7 @@ bfilter_exists(bf, b)
         SV * b
     CODE:
         STRLEN  blen = 0;
-        char *bptr = SvPVbyte(b, blen);
+        unsigned char *bptr = (unsigned char*)SvPVbyte(b, blen);
         RETVAL = bfilter_exists(bf, bptr, blen);
     OUTPUT:
         RETVAL

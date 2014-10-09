@@ -5,6 +5,4 @@ MANIFEST
 ppport.h
 README
 t/CountMin.t
-fallback/const-c.inc
-fallback/const-xs.inc
 lib/CountMin.pm

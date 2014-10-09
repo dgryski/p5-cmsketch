@@ -7,11 +7,7 @@
 #include <../libcmsketch/cm.h>
 #include <../libcmsketch/bf.h>
 
-#include "const-c.inc"
-
 MODULE = CountMin		PACKAGE = CountMin		
-
-INCLUDE: const-xs.inc
 
 cmsketch_t *
 sketch_new(w,d)

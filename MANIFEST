@@ -6,3 +6,4 @@ ppport.h
 README
 t/CountMin.t
 lib/CountMin.pm
+typemap

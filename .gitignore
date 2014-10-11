@@ -1,0 +1,8 @@
+CountMin.c
+MYMETA.*
+Makefile
+Makefile.old
+*.bs
+*.o
+blib/
+pm_to_blib

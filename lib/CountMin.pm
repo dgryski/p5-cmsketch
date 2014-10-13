@@ -3,10 +3,7 @@ package CountMin;
 use 5.014002;
 use strict;
 use warnings;
-use Carp;
-
-require Exporter;
-use AutoLoader;
+use Exporter;
 
 our @ISA = qw(Exporter);
 
@@ -30,7 +27,7 @@ our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
 
 our $VERSION = '0.01';
 
-require XSLoader;
+use XSLoader;
 XSLoader::load('CountMin', $VERSION);
 
 1;

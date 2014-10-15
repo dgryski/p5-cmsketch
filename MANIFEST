@@ -3,7 +3,7 @@ CountMin.xs
 Makefile.PL
 MANIFEST
 ppport.h
-README
+README.md
 t/CountMin.t
 lib/CountMin.pm
 typemap
